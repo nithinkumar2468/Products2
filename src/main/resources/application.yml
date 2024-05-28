@@ -1,0 +1,23 @@
+eureka:
+  client:
+    service-url:
+      default-zone: http://localhost:8761/eureka
+spring:
+  application:
+    name: Products2
+  cloud:
+    config:
+      enabled: 'false'
+  data:
+    mongodb:
+      database: CRM
+      port: '27017'
+      uri: mongodb+srv://root:mongodb@crm.5fnyhlo.mongodb.net/?retryWrites=true&w=majority&appName=CRM
+      host: localhost
+server:
+  port: '8081'
+
+
+#ZipkinDistributedtracing
+#management.tracing.sampling.probability=1.0
+#logging.pattern.level=%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]
